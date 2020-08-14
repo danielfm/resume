@@ -1,0 +1,262 @@
+\listfiles
+
+\documentclass[11pt,a4paper]{moderncv}
+
+% moderncv themes
+\moderncvtheme[blue]{classic}
+
+% character encoding
+\usepackage[utf8]{inputenc}
+
+% adjust page margins
+\usepackage[scale=0.9]{geometry}
+\recomputelengths
+
+% for placing content in footer/header
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+% personal data
+\firstname{Daniel}
+\familyname{Martins}
+\address{}{Rio de Janeiro, Brazil}
+\title{\small Software Engineer $\star$ Open Source Enthusiast $\star$ Guitarist}
+\social[github]{danielfm}
+\social[skype]{danielfmt}
+\social[linkedin]{danielfmartins}
+\email{hey@danielfm.me}
+\homepage{danielfm.me}
+
+\begin{document}
+
+\maketitle
+
+\section{\textsc{Objective And Qualification Summary}}
+
+\cvlistitem{Software engineer focused on backend systems, cluster management, operating systems, infrastructure, and related areas}
+\cvlistitem{Solid experience in writing, deploying, and maintaining cloud-native applications}
+\cvlistitem{Passionate about real-world high scalability problem solving}
+\cvlistitem{Experience acting as a lead engineer in small teams}
+
+\section{\textsc{Technical Skills}}
+
+\cvlistitem{\textbf{Languages}: Go, JavaScript, Bash, Ruby, Python, Lua, Java, Clojure, Matlab, C }
+\cvlistitem{\textbf{Web Frameworks}: Rails, Sinatra, Express.js, Django}
+\cvlistitem{\textbf{Web Servers}: NGINX, Unicorn, Puma}
+\cvlistitem{\textbf{Infrastructure as Code}: Terraform, Puppet, Capistrano, Fabric, Ansible}
+\cvlistitem{\textbf{Monitoring}: Grafana, Graphite, InfluxDB, Prometheus/AlertManager}
+\cvlistitem{\textbf{Container Technology}: Kubernetes, Tsuru, Docker, Rkt, Container Linux}
+\cvlistitem{\textbf{IaaS/PaaS}: AWS, DigitalOcean, Heroku}
+\cvlistitem{\textbf{Databases}: MongoDB, Redis, Postgres, Cassandra, MySQL}
+
+\section{\textsc{Featured Open Source Contributions}}
+
+\cvline{\githubsocialsymbol}{\textbf{\href{https://github.com/kubernetes/kubernetes}{kubernetes/kubernetes}}: Production-Grade Container Scheduling and Management}
+\vspace*{-0.15cm}
+\cvitem{}{
+  {\footnotesize
+    \begin{itemize}
+    \item PR \href{https://github.com/kubernetes/kubernetes/pull/48707}{\#48707}: Allow nodes to create evictions for its own pods in NodeRestriction admission controller
+    \end{itemize}
+  }
+}
+
+\vspace*{-0.5cm}
+\cvline{\githubsocialsymbol}{\textbf{\href{https://github.com/kubernetes-incubator/kube-aws}{kubernetes-incubator/kube-aws}}: Kubernetes on AWS with Container Linux}
+\vspace*{-0.15cm}
+\cvitem{}{
+  {\footnotesize
+    \begin{itemize}
+     \item I'm part of the core team and active contributor, with \href{https://github.com/kubernetes-incubator/kube-aws/pulls?q=is\%3Apr+is\%3Aclosed+author\%3Adanielfm}{several merged contributions}
+    \end{itemize}
+  }
+}
+
+\vspace*{-0.5cm}
+\cvline{\githubsocialsymbol}{\textbf{\href{https://github.com/kubernetes/ingress-nginx}{kubernetes/ingress-nginx}}: Ingress controller for NGINX}
+\vspace*{-0.15cm}
+\cvitem{}{
+  {\footnotesize
+    \begin{itemize}
+    \item PR \href{https://github.com/kubernetes/ingress-nginx/pull/1238}{\#1238}: Add support for \texttt{client\_body\_timeout} and \texttt{client\_header\_timeout}
+    \end{itemize}
+  }
+}
+
+\vspace*{-0.5cm}
+\cvline{\githubsocialsymbol}{\textbf{\href{https://github.com/kubernetes/charts}{kubernetes/charts}}: Curated applications for Kubernetes}
+\vspace*{-0.15cm}
+\cvitem{}{
+  {\footnotesize
+    \begin{itemize}
+    \item PRs \href{https://github.com/kubernetes/charts/pull/533}{\#533} and \href{https://github.com/kubernetes/charts/pull/535}{\#535} for Prometheus
+    \end{itemize}
+  }
+}
+
+\vspace*{-0.5cm}
+\section{\textsc{Featured Open Source Projects}}
+
+\cvline{\githubsocialsymbol}{\textbf{\href{https://github.com/danielfm/prometheus-for-developers}{danielfm/prometheus-for-developers}}: Practical Prometheus workshop for developers}
+\vspace*{-0.15cm}
+\cvitem{}{
+  {\footnotesize
+    \begin{itemize}
+    \item Gave this workshop for all engineering team at Descomplica for showing the basics about Prometheus
+    \item Provides cookbook-style queries for common scenarios and give some tips for avoiding common pitfalls
+    \end{itemize}
+  }
+}
+
+\vspace*{-0.5cm}
+\cvline{\githubsocialsymbol}{\textbf{\href{https://github.com/danielfm/kube-ecr-cleanup-controller}{danielfm/kube-ecr-cleanup-controller}}: ECR image cleanup controller for Kubernetes}
+\vspace*{-0.15cm}
+\cvitem{}{
+  {\footnotesize
+    \begin{itemize}
+    \item Controller written in Go that deletes old Docker images from whitelisted ECR repositories
+    \item It takes care not to delete images that are currently running in the cluster, and images tagged with \texttt{latest}
+    \end{itemize}
+  }
+}
+
+\vspace*{-0.5cm}
+\cvline{\githubsocialsymbol}{\textbf{\href{https://github.com/danielfm/pybreaker}{danielfm/pybreaker}}: Circuit Breaker implementation for Python}
+\vspace*{-0.15cm}
+\cvitem{}{
+  {\footnotesize
+    \begin{itemize}
+    \item Typically used in API clients in order to prevent cascading failures across multiple systems
+    \item Used by \href{https://medium.com/@mauriciosl/some-tips-writing-a-tornado-application-d21ea14df51e}{Globo.com}, \href{https://youtu.be/dY-SkuENZP8?t=9m34s}{AppNeta}, \href{https://github.com/amplify-education/pybreaker}{Amplify}, \href{https://github.com/seatgeek/pybreaker}{SeatGeek}, and others
+    \item Used to safeguard one of \href{http://globo.com}{Globo.com}'s the most accessed internal APIs, with tens of thousands of req/minute
+    \end{itemize}
+  }
+}
+
+\vspace*{-0.5cm}
+\cvline{\githubsocialsymbol}{\textbf{\href{https://github.com/xmlrunner/unittest-xml-reporting}{xmlrunner/unittest-xml-reporting}}: Test results exporter for Python}
+\vspace*{-0.15cm}
+\cvitem{}{
+  {\footnotesize
+    \begin{itemize}
+    \item XML file format supported by all major CI servers and build systems
+    \item Used by \href{http://khanacademy.org}{Khan Academy}, \href{http://globo.com}{Globo.com}, and others
+    \end{itemize}
+  }
+}
+
+\cvline{\githubsocialsymbol}{\textbf{\href{https://github.com/danielfm/bencode}{danielfm/bencode}}: BitTorrent encoding implementation in Clojure}
+\vspace*{-0.15cm}
+\cvitem{}{
+  {\footnotesize
+    \begin{itemize}
+    \item Parses bencoded strings directly to Clojure data structures and vice-versa
+    \item Features a threadpool-based parallel piece hashing implementation that can handle tens of GiB of data
+    \end{itemize}
+  }
+}
+
+\section{\textsc{Professional Experience}}
+
+\cventry{Jul. 2019 - Present}{Site Reliability Engineer}{\href{https://jusbrasil.com.br}{Jusbrasil}}{Remote from Rio de Janeiro, Brazil}{}{
+  {\footnotesize 
+    \begin{itemize}
+    \item \textbf{Technologies got to work on}: Bash, Kubernetes, Docker, Google Cloud, NGINX, and many others
+    \end{itemize}
+  }
+}
+\vspace*{0.2cm}
+
+\cventry{Jun. 2015 - Jul 2019}{Production Engineer / Site Reliability Engineer}{\href{https://descomplica.com.br}{Descomplica}}{Rio de Janeiro, Brazil}{}{
+  {\footnotesize 
+    \begin{itemize}
+    \item Started to implement more formal SRE practices for monitoring Service Level Objectives (SLOs) and Error Budgets
+    \item Acted as advisor for the product teams, by providing insights and architecture suggestions for making new services reliable and more well integrated with the current ecosystem
+    \item Helped reduce costs by rearranging the network topology to reduce data transfer charges, as well as right-sizing the EC2 instances to better match our workload requirements, and using spot/reserved instances
+    \item Changed the ingress infrastructure to leverage the AWS WAF, as well as NGINX, to mitigate common types of application-layer attacks, such as brute force and DDoS
+    \item Improved security by implementing tools for enforcing basic security policies, such as disabling old access keys and removing access from users without MFA enabled
+    \item Restructured user policy management by applying the principle of least privilege, role-based access control, and segregated networks for sensitive systems, such as data lakes
+    \item Streamlined infrastructure management by implementing an automated pipeline for reviewing, auditing, and applying infrastructure changes
+    \item Deployed a centralized logging solution for consuming the logs for all production services in a single place
+    \item Created comprehensive documentation on how to mitigate and resolve all currently known failure modes
+    \item Helped the product teams instrument all production services in order to give visibility into how the services were operating, and to spot optimization opportunities
+    \item Set up monitoring and alerting at all layers, from the services themselves to most basic infrastructure resources, such as AWS limits and RDS database usage metrics
+    \item Implemented a generic Continuous Delivery pipeline that enabled product teams to preview and safely push several changes to production every day
+    \item Migrated all critical services from AWS Beanstalk to Kubernetes, significantly cutting infrastructure costs due to better resource utilization
+    \item \textbf{Technologies got to work on}: Go, JavaScript, Bash, Kubernetes, Docker, AWS, NGINX, and many others
+    \end{itemize}
+  }
+}
+
+\vspace*{0.2cm}
+\cventry{Dec. 2010 - May 2015}{Software Engineer}{\href{http://globo.com}{Globo.com}}{Rio de Janeiro, Brazil}{}{
+  {\footnotesize 
+    \begin{itemize}
+    \item Worked on the Live Video Streaming Platform, a distributed architecture for live video ingest and delivery capable of broadcasting dozens of live streams to hundreds of thousands of users
+    \item Delivered \href{http://play.com.br}{Globosat Play}, a software platform that provides cable TV subscribers access to the video content licensed in Brazil by Globosat
+    \item Delivered \href{http://combate.tv}{Combate Play}, a website where Combate channel subscribers enjoy instant and unlimited access to a constantly updated collection of fights
+    \item Worked on 2012's Big Brother Brasil broadcasting page, which would then become a platform for publishing live video transmission pages (used in several ocasions ever since, like the UFC fight nights, Sochi Olympics, etc)
+    \item Worked on \href{http://globo.tv}{globo.tv}, a video-on-demand portal that organizes both free-to-watch and paid content produced by Globo
+    \item Worked on the current version of the \href{http://g1.globo.com/fantastico/videos/}{Video Catalog}, which consists of a CMS and a pluggable application for offering video-on-demand content
+    \item Delivered the first version of VideoThumbs, an API that serves dynamically resized and cropped video thumbnails
+    \item \textbf{Technologies got to work on}: Ruby, Python, Lua, Redis, MongoDB, Cassandra, NGINX, and many others
+    \end{itemize}
+  }
+}
+
+\vspace*{0.2cm}
+\cventry{Jan. 2008 - Dec. 2010}{Consultant}{Freelancer}{Ourinhos, Brazil}{}{
+  {\footnotesize
+    \begin{itemize}
+    \item Worked as an instructor for a SCJP 1.5 course to a class of a dozen students for local development shop
+    \item Delivered custom CRM system for a local real estate company that organized all brokers' activities, prospects, and kept track of sales goals
+    \item Delivered a basic multilingual e-commerce website for a local real estate company
+    \item Wrote a web-based user permission management tool for a client's legacy database, which were already being used by several internal applications	
+    \item \textbf{Technologies got to work on}: Java, Python, Oracle, MySQL
+    \end{itemize}
+  }
+}
+
+\vspace*{0.2cm}
+\cventry{Jun. 2004 - Sep. 2006}{Programmer}{\href{http://www.plasutil.com.br}{Plasútil}, \href{https://www.lecom.com.br/}{Lecom}}{Bauru, Brazil}{}{
+  {\footnotesize
+    \begin{itemize}
+    \item Eliminated severe performance bottlenecks on one of their most critical product
+    \item Wrote a few small Java applications for data exchange and data synchronization	
+    \item Developed a new Warehouse Management System to replace the old Dataflex-based legacy system
+    \item Wrote the first version of their Intranet application during my internship	
+    \item \textbf{Technologies got to work on}: Java, ASP, Informix, MySQL,PHP, .Net (C\#, WinForms), Oracle
+    \end{itemize}
+  }
+}
+
+\vspace*{0.2cm}
+\section{\textsc{Education}}
+
+\cventry{2003 - 2006}{Bachelor, Computer Information Systems}{Faculdade Gennari \& Peartree (FGP)}{}{}{}
+\cventry{2000 - 2002}{Technical School, Computer Programming}{Liceu Noroeste}{}{}{}
+
+\section{\textsc{Courses and Certifications}}
+
+\cventry{Mar. 2017}{LFS258: Kubernetes Fundamentals}{Linux Foundation}{}{}{}
+\cventry{Dec. 2013}{CS1156X: Learning From Data}{CaltechX}{}{}{}
+\cventry{Dec. 2011}{Intro to Machine Learning}{Coursera}{}{}{}
+\cventry{Feb. 2007}{SCWCP: Sun Certified Web Component Developer 1.4}{Prometric}{}{}{}
+
+\section{\textsc{Featured Articles}}
+
+\cventry{Sep. 2017}{\href{https://danielfm.me/posts/painless-nginx-ingress.html}{Pain(less) NGINX ingress}}{Personal Website}{}{}{Post reached \#6 in \href{https://news.ycombinator.com/item?id=15238672}{HackerNews}}
+\cventry{Sep. 2016}{\href{https://danielfm.me/posts/five-months-of-kubernetes.html}{Five Months of Kubernetes}}{Personal Website}{}{}{Post reached \#4 in \href{https://news.ycombinator.com/item?id=12498982}{HackerNews}}
+
+\section{\textsc{Conferences}}
+
+\cventry{Nov. 2016}{KubeCon}{}{Seattle/WA, USA}{}{}
+\cventry{Sep. 2014}{Strange Loop}{}{St Louis/MO, USA}{}{}
+\cventry{Feb. 2013}{Strata}{}{Santa Clara/CA, USA}{}{}
+\cventry{Jun. 2012}{Velocity}{}{Santa Clara/CA, USA}{}{}
+
+\cfoot{
+\footnotesize{\emph{\textcolor{lightgray}{The updated version of this document can be found at https://github.com/danielfm/resume}}}
+}
+
+\end{document}
